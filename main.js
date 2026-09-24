@@ -194,81 +194,181 @@
 //     return `Площадь: ${area}`;
 // };
 // console.log(calculateArea(5, 3));
+// console.log("\n\nШАГ 7: Массивы \n");
 
 
-console.log("\n\nШАГ 7: Массивы \n");
+// console.log(" Создание массива");
+// const fruits = ["яблоко", "банан", "апельсин"];
+// console.log(fruits);
 
 
-console.log(" Создание массива");
-const fruits = ["яблоко", "банан", "апельсин"];
-console.log(fruits);
+// console.log("\n Доступ к элементам ");
+// console.log(`Первый элемент: ${fruits[0]}`);
+// console.log(`Второй элемент: ${fruits[1]}`);
+// console.log(`Третий элемент: ${fruits[2]}`);
 
 
-console.log("\n Доступ к элементам ");
-console.log(`Первый элемент: ${fruits[0]}`);
-console.log(`Второй элемент: ${fruits[1]}`);
-console.log(`Третий элемент: ${fruits[2]}`);
+// console.log("\n Практическое задание №1 ");
+// const colors = ["красный", "зелёный", "синий"];
+// console.log(`Первый цвет: ${colors[0]}`);
+// console.log(`Последний цвет: ${colors[colors.length - 1]}`);
+
+// colors[1] = "жёлтый";
+// console.log(`Массив после изменения: ${colors}`);
 
 
-console.log("\n Практическое задание №1 ");
-const colors = ["красный", "зелёный", "синий"];
-console.log(`Первый цвет: ${colors[0]}`);
-console.log(`Последний цвет: ${colors[colors.length - 1]}`);
-
-colors[1] = "жёлтый";
-console.log(`Массив после изменения: ${colors}`);
+// console.log("\n Длина массива ");
+// console.log(`Длина массива colors: ${colors.length}`);
 
 
-console.log("\n Длина массива ");
-console.log(`Длина массива colors: ${colors.length}`);
+// console.log("\n push и pop ");
+// const numbers = [1, 2, 3];
+// console.log(`Исходный массив: ${numbers}`);
 
+// numbers.push(4);
+// console.log(`После push(4): ${numbers}`);
 
-console.log("\n push и pop ");
-const numbers = [1, 2, 3];
-console.log(`Исходный массив: ${numbers}`);
+// const lastElement = numbers.pop();
+// console.log(`После pop(): ${numbers}, удалён: ${lastElement}`);
 
-numbers.push(4);
-console.log(`После push(4): ${numbers}`);
+// console.log("\nПрактическое задание №2");
+// const students = [];
+// students.push("Алексей");
+// students.push("Мария");
+// students.push("Иван");
+// console.log(`Массив студентов: ${students}`);
 
-const lastElement = numbers.pop();
-console.log(`После pop(): ${numbers}, удалён: ${lastElement}`);
+// students.pop();
+// console.log(`После удаления последнего: ${students}`);
+// console.log("\n Перебор через for");
+// const animals = ["кот", "собака", "попугай"];
+// for (let i = 0; i < animals.length; i++) {
+//     console.log(`${i + 1}. ${animals[i]}`);
+// }
+// console.log("\n Цикл for...of ");
+// for (const animal of animals) {
+//     console.log(animal);
+// }
+// console.log("\n Массивы с разными типами ");
+// const mixed = [42, "привет", true, null, { name: "Иван" }];
+// console.log(mixed);
+// console.log("\n Поиск элемента ");
+// const cities = ["Москва", "Санкт-Петербург", "Казань", "Новосибирск"];
+// const index = cities.indexOf("Казань");
+// console.log(`Индекс "Казань": ${index}`);
+// const notFound = cities.indexOf("Волжский");
+// console.log(`Индекс "Волжский": ${notFound}`);
+// const hasKazan = cities.includes("Казань");
+// console.log(`Есть ли "Казань"? ${hasKazan}`);
+// const hasVolzhsky = cities.includes("Волжский");
+// console.log(`Есть ли "Волжский"? ${hasVolzhsky}`);
+// console.log("\n Практическое задание №4 ");
+// const targetCity = "Казань";
+// if (cities.includes(targetCity)) {
+//     const cityIndex = cities.indexOf(targetCity);
+//     console.log(`Город "${targetCity}" найден на индексе ${cityIndex}`);
+// } else {
+//     console.log(`Город "${targetCity}" не найден`);
+// }
+// ============================================
+// ШАГ 8. Объекты в JavaScript
+// ============================================
 
-console.log("\nПрактическое задание №2");
-const students = [];
-students.push("Алексей");
-students.push("Мария");
-students.push("Иван");
-console.log(`Массив студентов: ${students}`);
+console.log("\n\n ШАГ 8: Объекты \n");
+console.log(" 8.2. Создание объекта ");
+const person = {
+    name: "Иван",
+    age: 25,
+    city: "Москва"
+};
+console.log(person);
+console.log("\n Доступ к свойствам ");
+console.log(`Имя: ${person.name}`);
+console.log(`Возраст: ${person.age}`);
 
-students.pop();
-console.log(`После удаления последнего: ${students}`);
-console.log("\n Перебор через for");
-const animals = ["кот", "собака", "попугай"];
-for (let i = 0; i < animals.length; i++) {
-    console.log(`${i + 1}. ${animals[i]}`);
+console.log(`Город: ${person["city"]}`);
+console.log("\n 8.4. Практическое задание №1 ");
+const book = {
+    title: "Война и мир",
+    author: "Лев Толстой",
+    year: 1869
+};
+console.log(`Название: ${book.title}`);
+console.log(`Автор: ${book.author}`);
+console.log(`Год: ${book.year}`);
+book.year = 1873;
+console.log(`Новый год издания: ${book.year}`);
+console.log("\n Добавление и удаление свойств ");
+const car = {
+    brand: "Toyota",
+    model: "Camry"
+};
+console.log(`Исходный объект: ${JSON.stringify(car)}`);
+
+car.year = 2020;
+console.log(`После добавления year: ${JSON.stringify(car)}`);
+
+delete car.model;
+console.log(`После удаления model: ${JSON.stringify(car)}`);
+console.log("\n Объект с методами ");
+const user = {
+    name: "Алексей",
+    age: 30,
+    sayHello: function() {
+        console.log(`Привет, меня зовут ${this.name}!`);
+    }
+};
+user.sayHello();
+console.log("\n Практическое задание №2 ");
+const myCar = {
+    brand: "BMW",
+    year: 2022,
+    getInfo: function() {
+        console.log(`Автомобиль: ${this.brand}, Год выпуска: ${this.year}`);
+    }
+};
+myCar.getInfo();
+console.log("\n Перебор свойств (for...in) ");
+const product = {
+    name: "Ноутбук",
+    price: 50000,
+    category: "Электроника"
+};
+
+for (const key in product) {
+    console.log(`${key}: ${product[key]}`);
 }
-console.log("\n Цикл for...of ");
-for (const animal of animals) {
-    console.log(animal);
+
+
+console.log("\n Практическое задание №3 ");
+const item = {
+    id: 1,
+    title: "Смартфон",
+    price: 30000,
+    inStock: true
+};
+console.log("Свойства объекта item:");
+for (const key in item) {
+    console.log(`${key}: ${item[key]}`);
 }
-console.log("\n Массивы с разными типами ");
-const mixed = [42, "привет", true, null, { name: "Иван" }];
-console.log(mixed);
-console.log("\n Поиск элемента ");
-const cities = ["Москва", "Санкт-Петербург", "Казань", "Новосибирск"];
-const index = cities.indexOf("Казань");
-console.log(`Индекс "Казань": ${index}`);
-const notFound = cities.indexOf("Волжский");
-console.log(`Индекс "Волжский": ${notFound}`);
-const hasKazan = cities.includes("Казань");
-console.log(`Есть ли "Казань"? ${hasKazan}`);
-const hasVolzhsky = cities.includes("Волжский");
-console.log(`Есть ли "Волжский"? ${hasVolzhsky}`);
-console.log("\n Практическое задание №4 ");
-const targetCity = "Казань";
-if (cities.includes(targetCity)) {
-    const cityIndex = cities.indexOf(targetCity);
-    console.log(`Город "${targetCity}" найден на индексе ${cityIndex}`);
-} else {
-    console.log(`Город "${targetCity}" не найден`);
+
+console.log("\n Вложенные объекты и массивы ");
+const order = {
+    orderId: 12345,
+    customer: {
+        name: "Иван Иванов",
+        email: "ivan@example.com"
+    },
+    items: [
+        { product: "Ноутбук", quantity: 1, price: 50000 },
+        { product: "Мышь", quantity: 2, price: 1500 }
+    ],
+    total: 53000
+};
+console.log(`Заказ №${order.orderId}`);
+console.log(`Клиент: ${order.customer.name}`);
+console.log("Товары:");
+for (const item of order.items) {
+    console.log(`  - ${item.product}: ${item.quantity} шт. × ${item.price}₽`);
 }
+console.log(`Итого: ${order.total}₽`);
